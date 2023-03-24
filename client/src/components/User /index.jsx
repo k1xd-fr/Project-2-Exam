@@ -1,17 +1,16 @@
-import React from 'react'
-import Header from '../Layout/Header'
-import { UserBonus } from './UserBonus'
-import UserDataBase from './UserDataBase'
+import React from "react";
+import Header from "../Layout/Header";
+import { UserBonus } from "./UserBonus";
+import UserDataBase from "./UserDataBase";
 
 const User = () => {
   return (
     <>
-        <Header/>
-        <UserBonus/>
-        <UserDataBase/>
+      <Header />
+      <UserBonus />
+      <UserDataBase />
     </>
-  )
-}
+  );
+};
 
-export default User
-
+export default User;
