@@ -1,0 +1,195 @@
+.container
+  max-width: 1280px
+  margin: 0 auto
+
+.cards
+  padding-top: 55px
+
+.cards1
+  display: flex
+  align-items: center
+  gap: 40px
+  padding-top: 50px
+
+.cards2
+  padding-top: 50px
+  display: flex
+  align-items: center
+  gap: 40px
+.cards3
+  padding-top: 50px
+  display: flex
+  align-items: center
+  gap: 40px
+.cards4
+  padding-top: 50px
+  display: flex
+  align-items: center
+  gap: 40px
+.cards5
+  padding-top: 50px
+  display: flex
+  align-items: center
+  gap: 40px
+
+.card
+  width: 270px
+  height: 466px
+  position: relative
+  padding: 10px
+
+.title
+  font-weight: 700
+  font-size: 30px
+  line-height: 37px
+  color: #FF2E65
+  margin-bottom: 25px
+
+.cardDescription
+  display: flex
+  flex-direction: column
+  gap: 20px
+  .cardTitle
+    font-weight: 800
+    font-size: 24px
+    line-height: 28px
+    color: #0E0C0D
+  .description
+    font-weight: 500
+    font-size: 14px
+    width: 254px
+    // width: 100%
+    line-height: 19px
+    color: #686466
+  .priceBasket
+    display: flex
+    align-items: center
+    gap: 30px
+    .basketBtn
+      padding: 4px 25px
+      border: none
+      color: #fff
+      font-weight: 700
+      font-size: 14px
+      line-height: 28px
+      background: #FF2E65
+      border-radius: 5px
+      cursor: pointer
+    .price
+      font-weight: 700
+      font-size: 22px
+      line-height: 19px
+      color: #231F20
+
+.text
+  position: absolute
+  bottom: -220px
+  right: 1340px
+  padding: 5px 8px
+  background: #FF2E65
+  border-radius: 10px
+  color: #fff
+  font-weight: 700
+  font-size: 12px
+
+.cardImage
+  transform: translateY(0)
+  transition: 0.1s all
+  &:hover
+    transform: translateY(10px)
+
+@media screen and ( max-width: 1200px)
+
+  .title
+    margin-left: 50px
+
+  .cards1
+    display: flex
+    flex-wrap: wrap
+
+  .cards2
+    display: sflex
+    flex-wrap: wrap
+
+  .cards3
+    display: flex
+    flex-wrap: wrap
+
+  .cards4
+    display: flex
+    flex-wrap: wrap
+
+  .cards5
+    display: flex
+    flex-wrap: wrap
+
+@media screen and ( max-width: 900px)
+  .cards1
+    display: flex
+    justify-content: center
+  .cards2
+    display: flex
+    justify-content: center
+  .cards3
+    display: flex
+    justify-content: center
+  .cards4
+    display: flex
+    justify-content: center
+  .cards5
+    display: flex
+    justify-content: center
+
+@media screen and ( max-width: 580px)
+  .card
+    padding: 16px !important
+  .cards
+    display: flex
+    justify-content: center
+  .card
+    display: flex
+    align-items: center
+
+  .cardImage
+    width: 150px
+    height: 150px
+
+  .cardTitle
+    font-size: 22px !important
+
+  .basketBtn
+    padding: 4px 10px !important
+
+  .price
+    font-size: 16px !important
+
+@media screen and ( max-width: 320px )
+
+  .card
+    display: flex
+    flex-direction: column
+    padding: 12px
+    justify-content: center
+
+  .cardImage
+    width: 150px
+    height: 150px
+
+  .cardTitle
+    text-align: center
+    font-weight: 500
+    font-size: 18px
+  .basketBtn
+    padding: 5px 10px
+  .description
+    font-size: 16px !important
+  .price
+    font-size: 17px !important
+
+  .description
+    // width: 100px
+    font-size: 14px !important
+    text-align: center
+
+  .priceBasket
+    justify-content: center

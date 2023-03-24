@@ -1,0 +1,67 @@
+
+.block
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  width: 100vw
+  height: 100vh
+  background: #00000073
+  z-index: 99
+  .modal
+    position: absolute
+    background: #fff
+    width: 670px
+    margin: auto
+    left: 0
+    right: 0
+    animation: myAnim .5s ease 0s 1 normal forwards
+    top: 0
+    bottom: 0
+    height: 320px
+    padding: 45px
+    border-radius: 12px
+    .formTitle
+      color: #FF2E65
+      font-size: 32px
+      font-weight: 700
+      margin-bottom: 40px
+    .close
+      position: absolute
+      top: -20px
+      right: -45px
+      width: max-content
+      font-size: 70px
+      color: #fff
+      cursor: pointer
+      
+.textNum
+  color: #686466
+  font-weight: 600
+  font-size: 13px
+
+.numberLabel
+  display: flex
+  align-items: center
+  gap: 20px
+  margin-bottom: 80px
+  .input
+    padding: 10px 20px
+    outline: none
+    border: solid 1.5px #939399
+    border-radius: 5px
+
+.btn
+  padding: 14px 59px
+  background: #FF2E65
+  border-radius: 8px
+  color: #fff
+  border: none
+  font-size: 15px
+  font-weight: 800
+  cursor: pointer
+@keyframes myAnim
+  0%
+    transform: scale(0)
+  100%
+    transform: scale(1)
