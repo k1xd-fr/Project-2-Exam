@@ -1,4 +1,4 @@
-import Cards from "../Layout/Cards";
+import Cards from "../Layout/PizzaCards";
 import Header from "../Layout/Header";
 import Map from "../Layout/Map";
 import Slider from "../UI/Slider/Slider";

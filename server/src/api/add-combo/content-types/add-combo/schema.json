@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "add_combos",
+  "info": {
+    "singularName": "add-combo",
+    "pluralName": "add-combos",
+    "displayName": "Add-combo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "add_salads",
+  "info": {
+    "singularName": "add-salad",
+    "pluralName": "add-salads",
+    "displayName": "Add-salad"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

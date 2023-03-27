@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "add_actions",
+  "info": {
+    "singularName": "add-action",
+    "pluralName": "add-actions",
+    "displayName": "Add-action"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

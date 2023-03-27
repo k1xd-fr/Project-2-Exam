@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * user-pizza service
+ * add-drink service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::user-pizza.user-pizza');
+module.exports = createCoreService('api::add-drink.add-drink');

@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "add_deserts",
+  "info": {
+    "singularName": "add-desert",
+    "pluralName": "add-deserts",
+    "displayName": "Add-desert"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}
