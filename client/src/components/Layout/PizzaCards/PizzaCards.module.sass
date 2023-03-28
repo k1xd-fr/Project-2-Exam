@@ -2,42 +2,20 @@
   max-width: 1280px
   margin: 0 auto
 
-.cards
+.menu
   padding-top: 55px
-
-.cards1
+.cards
   display: flex
-  align-items: center
-  gap: 40px
-  padding-top: 50px
-
-.cards2
-  padding-top: 50px
-  display: flex
-  align-items: center
-  gap: 40px
-.cards3
-  padding-top: 50px
-  display: flex
-  align-items: center
-  gap: 40px
-.cards4
-  padding-top: 50px
-  display: flex
-  align-items: center
-  gap: 40px
-.cards5
-  padding-top: 50px
-  display: flex
-  align-items: center
-  gap: 40px
-
+  max-width: 1150px
+  flex-wrap: wrap
+  gap: 20px
 .card
   width: 270px
-  height: 466px
-  position: relative
+  height: 450px
   padding: 10px
-
+  display: flex
+  flex-direction: column
+  gap: 10px
 .title
   font-weight: 700
   font-size: 30px
@@ -48,6 +26,7 @@
 .cardDescription
   display: flex
   flex-direction: column
+  justify-content: center
   gap: 20px
   .cardTitle
     font-weight: 800
@@ -57,10 +36,10 @@
   .description
     font-weight: 500
     font-size: 14px
-    width: 254px
-    // width: 100%
+    max-width: 254px
     line-height: 19px
     color: #686466
+    height: 70px
   .priceBasket
     display: flex
     align-items: center
@@ -80,70 +59,14 @@
       font-size: 22px
       line-height: 19px
       color: #231F20
-
-.text
-  position: absolute
-  bottom: -220px
-  right: 1340px
-  padding: 5px 8px
-  background: #FF2E65
-  border-radius: 10px
-  color: #fff
-  font-weight: 700
-  font-size: 12px
-
 .cardImage
   transform: translateY(0)
   transition: 0.1s all
   &:hover
-    transform: translateY(10px)
-
-@media screen and ( max-width: 1200px)
-
-  .title
-    margin-left: 50px
-
-  .cards1
-    display: flex
-    flex-wrap: wrap
-
-  .cards2
-    display: sflex
-    flex-wrap: wrap
-
-  .cards3
-    display: flex
-    flex-wrap: wrap
-
-  .cards4
-    display: flex
-    flex-wrap: wrap
-
-  .cards5
-    display: flex
-    flex-wrap: wrap
-
-@media screen and ( max-width: 900px)
-  .cards1
-    display: flex
-    justify-content: center
-  .cards2
-    display: flex
-    justify-content: center
-  .cards3
-    display: flex
-    justify-content: center
-  .cards4
-    display: flex
-    justify-content: center
-  .cards5
-    display: flex
-    justify-content: center
-
-@media screen and ( max-width: 580px)
+    transform: translateY(10px)  
   .card
     padding: 16px !important
-  .cards
+  .menu
     display: flex
     justify-content: center
   .card
