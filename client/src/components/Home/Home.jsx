@@ -2,14 +2,15 @@ import Cards from "../Layout/PizzaCards";
 import Header from "../Layout/Header";
 import Map from "../Layout/Map";
 import Slider from "../UI/Slider/Slider";
-import Image from "next/image";
+import Footer from "../Layout/Footer";
+import MainAction from "../Layout/MainAction";
 
 const Home = () => {
   return (
     <>
       <Header />
       <div>
-        <Slider items={[{title: 'dsadsa', image: 'dasdasd'}]}>
+        <Slider items={[{ title: "dsadsa", image: "dasdasd" }]}>
           <div>
             <Image
               src="/img/slider-img1.png"
@@ -36,7 +37,9 @@ const Home = () => {
           </div>
         </Slider>
         <Cards />
+        <MainAction />
         <Map />
+        <Footer />
       </div>
     </>
   );

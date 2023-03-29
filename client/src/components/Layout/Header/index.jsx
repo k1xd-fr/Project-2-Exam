@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import styles from "./Header.module.sass";
 import Modal from "@/components/ui/Modal/Modal";
-import { Register } from "@/components/ui/Modal/Register/Register";
+import { Register } from "@/components/UI/Modal/Register/Register";
 
 const Header = () => {
   const { asPath } = useRouter();
