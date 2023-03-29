@@ -1,6 +1,14 @@
+import {
+  fetchCombos,
+  fetchDeserts,
+  fetchDrinks,
+  fetchPizzas,
+  fetchSalads,
+} from "@/api/requsetPizza";
 import Basket from "@/components/ui/Basket/Basket";
-import Image from "next/image";
-import { useState } from "react";
+
+import { useEffect, useState } from "react";
+import Item from "./Item/pizza";
 
 import styles from "./PizzaCards.module.sass";
 
@@ -10,511 +18,69 @@ const Cards = () => {
   const trash = () => {
     setShow((show) => !show);
   };
+  const [dataPizza, setDataPizza] = useState([]);
+  const [dataSalad, setDataSalad] = useState([]);
+  const [dataDrink, setDataDrink] = useState([]);
+  const [dataDesert, setDataDesert] = useState([]);
+  const [dataCombo, setDataCombo] = useState([]);
+  useEffect(() => {
+    fetchPizzas().then((data) => {
+      setDataPizza(data.data);
+    });
+    fetchSalads().then((data) => {
+      setDataSalad(data.data);
+    });
+    fetchDrinks().then((data) => {
+      setDataDrink(data.data);
+    });
+    fetchDeserts().then((data) => {
+      setDataDesert(data.data);
+    });
+    fetchCombos().then((data) => {
+      setDataCombo(data.data);
+    });
+  }, []);
 
   return (
-    <div className={styles.cards}>
+    <div className={styles.menu}>
       <div className={styles.container}>
         <h1 className={styles.title}>Пицца</h1>
-        <div className={styles.cards1}>
-          <div className={styles.card}>
-            <Image
-              src="/images/pizza/PizzaDoubleChick.webp"
-              width={253}
-              height={253}
-              className={styles.cardImage}
-            />
-            <div className={styles.cardDescription}>
-              <h4 className={styles.cardTitle}>
-                С креветками и <br /> трюфелями
-              </h4>
-              <p className={styles.description}>
-                Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное
-                масло, черный перец, пармезан.350 г
-              </p>
-              <div className={styles.priceBasket}>
-                <h5 className={styles.price}>от 600 ₽</h5>
-                <button className={styles.basketBtn} onClick={trash}>
-                  В корзину
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.card}>
-            <Image
-              src="/images/pizza/PizzaDoubleChick.webp"
-              width={253}
-              height={253}
-              className={styles.cardImage}
-            />
-            <div className={styles.cardDescription}>
-              <h4 className={styles.cardTitle}>
-                С креветками и <br /> трюфелями
-              </h4>
-              <p className={styles.description}>
-                Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное
-                масло, черный перец, пармезан.350 г
-              </p>
-              <div className={styles.priceBasket}>
-                <h5 className={styles.price}>от 600 ₽</h5>
-                <button className={styles.basketBtn} onClick={trash}>
-                  В корзину
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className={styles.card}>
-            <Image
-              src="/images/pizza/PizzaDoubleChick.webp"
-              width={253}
-              height={253}
-              className={styles.cardImage}
-            />
-            <div className={styles.cardDescription}>
-              <h4 className={styles.cardTitle}>
-                С креветками и <br /> трюфелями
-              </h4>
-              <p className={styles.description}>
-                Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное
-                масло, черный перец, пармезан.350 г
-              </p>
-              <div className={styles.priceBasket}>
-                <h5 className={styles.price}>от 600 ₽</h5>
-                <button className={styles.basketBtn} onClick={trash}>
-                  В корзину
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className={styles.card}>
-            <Image
-              src="/images/pizza/PizzaDoubleChick.webp"
-              width={253}
-              height={253}
-              className={styles.cardImage}
-            />
-            <div className={styles.cardDescription}>
-              <h4 className={styles.cardTitle}>
-                С креветками и <br /> трюфелями
-              </h4>
-              <p className={styles.description}>
-                Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное
-                масло, черный перец, пармезан.350 г
-              </p>
-              <div className={styles.priceBasket}>
-                <h5 className={styles.price}>от 600 ₽</h5>
-                <button className={styles.basketBtn} onClick={trash}>
-                  В корзину
-                </button>
-              </div>
-            </div>
-          </div>
+        <div className={styles.cards}>
+          {dataPizza.map((data) => {
+            return <Item data={data} key={data.id} trash={trash} />;
+          })}
         </div>
-
-        <div className={styles.cards2}>
-          <div className={styles.card}>
-            <Image
-              src="/images/pizza/PizzaDoubleChick.webp"
-              width={253}
-              height={253}
-              className={styles.cardImage}
-            />
-            <div className={styles.cardDescription}>
-              <h4 className={styles.cardTitle}>
-                С креветками и <br /> трюфелями
-              </h4>
-              <p className={styles.description}>
-                Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное
-                масло, черный перец, пармезан.350 г
-              </p>
-              <div className={styles.priceBasket}>
-                <h5 className={styles.price}>от 600 ₽</h5>
-                <button className={styles.basketBtn} onClick={trash}>
-                  В корзину
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.card}>
-            <Image
-              src="/images/pizza/PizzaDoubleChick.webp"
-              width={253}
-              height={253}
-              className={styles.cardImage}
-            />
-            <div className={styles.cardDescription}>
-              <h4 className={styles.cardTitle}>
-                С креветками и <br /> трюфелями
-              </h4>
-              <p className={styles.description}>
-                Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное
-                масло, черный перец, пармезан.350 г
-              </p>
-              <div className={styles.priceBasket}>
-                <h5 className={styles.price}>от 600 ₽</h5>
-                <button className={styles.basketBtn} onClick={trash}>
-                  В корзину
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.card}>
-            <Image
-              src="/images/pizza/PizzaDoubleChick.webp"
-              width={253}
-              height={253}
-              className={styles.cardImage}
-            />
-            <div className={styles.cardDescription}>
-              <h4 className={styles.cardTitle}>
-                С креветками и <br /> трюфелями
-              </h4>
-              <p className={styles.description}>
-                Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное
-                масло, черный перец, пармезан.350 г
-              </p>
-              <div className={styles.priceBasket}>
-                <h5 className={styles.price}>от 600 ₽</h5>
-                <button className={styles.basketBtn} onClick={trash}>
-                  В корзину
-                </button>
-              </div>
-            </div>
-          </div>
-          <span className={styles.text}>News</span>
-
-          <div className={styles.card}>
-            <Image
-              src="/images/pizza/PizzaDoubleChick.webp"
-              width={253}
-              height={253}
-              className={styles.cardImage}
-            />
-            <div className={styles.cardDescription}>
-              <h4 className={styles.cardTitle}>
-                С креветками и <br /> трюфелями
-              </h4>
-              <p className={styles.description}>
-                Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное
-                масло, черный перец, пармезан.350 г
-              </p>
-              <div className={styles.priceBasket}>
-                <h5 className={styles.price}>от 600 ₽</h5>
-                <button className={styles.basketBtn} onClick={trash}>
-                  В корзину
-                </button>
-              </div>
-            </div>
-          </div>
-          <span className={styles.text}>News</span>
+      </div>
+      <div className={styles.container}>
+        <h1 className={styles.title}>Салаты</h1>
+        <div className={styles.cards}>
+          {dataSalad.map((data) => {
+            return <Item data={data} key={data.id} trash={trash} />;
+          })}
         </div>
-
-        <div className={styles.cards3}>
-          <div className={styles.card}>
-            <Image
-              src="/images/pizza/PizzaDoubleChick.webp"
-              width={253}
-              height={253}
-              className={styles.cardImage}
-            />
-            <div className={styles.cardDescription}>
-              <h4 className={styles.cardTitle}>
-                С креветками и <br /> трюфелями
-              </h4>
-              <p className={styles.description}>
-                Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное
-                масло, черный перец, пармезан.350 г
-              </p>
-              <div className={styles.priceBasket}>
-                <h5 className={styles.price}>от 600 ₽</h5>
-                <button className={styles.basketBtn} onClick={trash}>
-                  В корзину
-                </button>
-              </div>
-            </div>
-          </div>
-          <span className={styles.text}>News</span>
-
-          <div className={styles.card}>
-            <Image
-              src="/images/pizza/PizzaDoubleChick.webp"
-              width={253}
-              height={253}
-              className={styles.cardImage}
-            />
-            <div className={styles.cardDescription}>
-              <h4 className={styles.cardTitle}>
-                С креветками и <br /> трюфелями
-              </h4>
-              <p className={styles.description}>
-                Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное
-                масло, черный перец, пармезан.350 г
-              </p>
-              <div className={styles.priceBasket}>
-                <h5 className={styles.price}>от 600 ₽</h5>
-                <button className={styles.basketBtn} onClick={trash}>
-                  В корзину
-                </button>
-              </div>
-            </div>
-          </div>
-          <span className={styles.text}>News</span>
-
-          <div className={styles.card}>
-            <Image
-              src="/images/pizza/PizzaDoubleChick.webp"
-              width={253}
-              height={253}
-              className={styles.cardImage}
-            />
-            <div className={styles.cardDescription}>
-              <h4 className={styles.cardTitle}>
-                С креветками и <br /> трюфелями
-              </h4>
-              <p className={styles.description}>
-                Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное
-                масло, черный перец, пармезан.350 г
-              </p>
-              <div className={styles.priceBasket}>
-                <h5 className={styles.price}>от 600 ₽</h5>
-                <button className={styles.basketBtn} onClick={trash}>
-                  В корзину
-                </button>
-              </div>
-            </div>
-          </div>
-          <span className={styles.text}>News</span>
-
-          <div className={styles.card}>
-            <Image
-              src="/images/pizza/PizzaDoubleChick.webp"
-              width={253}
-              height={253}
-              className={styles.cardImage}
-            />
-            <div className={styles.cardDescription}>
-              <h4 className={styles.cardTitle}>
-                С креветками и <br /> трюфелями
-              </h4>
-              <p className={styles.description}>
-                Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное
-                масло, черный перец, пармезан.350 г
-              </p>
-              <div className={styles.priceBasket}>
-                <h5 className={styles.price}>от 600 ₽</h5>
-                <button className={styles.basketBtn} onClick={trash}>
-                  В корзину
-                </button>
-              </div>
-            </div>
-          </div>
-          <span className={styles.text}>News</span>
+      </div>
+      <div className={styles.container}>
+        <h1 className={styles.title}>Напитки</h1>
+        <div className={styles.cards}>
+          {dataDrink.map((data) => {
+            return <Item data={data} key={data.id} trash={trash} />;
+          })}
         </div>
-
-        <div className={styles.cards4}>
-          <div className={styles.card}>
-            <Image
-              src="/images/pizza/PizzaDoubleChick.webp"
-              width={253}
-              height={253}
-              className={styles.cardImage}
-            />
-            <div className={styles.cardDescription}>
-              <h4 className={styles.cardTitle}>
-                С креветками и <br /> трюфелями
-              </h4>
-              <p className={styles.description}>
-                Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное
-                масло, черный перец, пармезан.350 г
-              </p>
-              <div className={styles.priceBasket}>
-                <h5 className={styles.price}>от 600 ₽</h5>
-                <button className={styles.basketBtn} onClick={trash}>
-                  В корзину
-                </button>
-              </div>
-            </div>
-          </div>
-          <span className={styles.text}>News</span>
-
-          <div className={styles.card}>
-            <Image
-              src="/images/pizza/PizzaDoubleChick.webp"
-              width={253}
-              height={253}
-              className={styles.cardImage}
-            />
-            <div className={styles.cardDescription}>
-              <h4 className={styles.cardTitle}>
-                С креветками и <br /> трюфелями
-              </h4>
-              <p className={styles.description}>
-                Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное
-                масло, черный перец, пармезан.350 г
-              </p>
-              <div className={styles.priceBasket}>
-                <h5 className={styles.price}>от 600 ₽</h5>
-                <button className={styles.basketBtn} onClick={trash}>
-                  В корзину
-                </button>
-              </div>
-            </div>
-          </div>
-          <span className={styles.text}>News</span>
-
-          <div className={styles.card}>
-            <Image
-              src="/images/pizza/PizzaDoubleChick.webp"
-              width={253}
-              height={253}
-              className={styles.cardImage}
-            />
-            <div className={styles.cardDescription}>
-              <h4 className={styles.cardTitle}>
-                С креветками и <br /> трюфелями
-              </h4>
-              <p className={styles.description}>
-                Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное
-                масло, черный перец, пармезан.350 г
-              </p>
-              <div className={styles.priceBasket}>
-                <h5 className={styles.price}>от 600 ₽</h5>
-                <button className={styles.basketBtn} onClick={trash}>
-                  В корзину
-                </button>
-              </div>
-            </div>
-          </div>
-          <span className={styles.text}>News</span>
-
-          <div className={styles.card}>
-            <Image
-              src="/images/pizza/PizzaDoubleChick.webp"
-              width={253}
-              height={253}
-              className={styles.cardImage}
-            />
-            <div className={styles.cardDescription}>
-              <h4 className={styles.cardTitle}>
-                С креветками и <br /> трюфелями
-              </h4>
-              <p className={styles.description}>
-                Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное
-                масло, черный перец, пармезан.350 г
-              </p>
-              <div className={styles.priceBasket}>
-                <h5 className={styles.price}>от 600 ₽</h5>
-                <button className={styles.basketBtn} onClick={trash}>
-                  В корзину
-                </button>
-              </div>
-            </div>
-          </div>
-          <span className={styles.text}>News</span>
+      </div>
+      <div className={styles.container}>
+        <h1 className={styles.title}>Десерты</h1>
+        <div className={styles.cards}>
+          {dataDesert.map((data) => {
+            return <Item data={data} key={data.id} trash={trash} />;
+          })}
         </div>
-
-        <div className={styles.cards5}>
-          <div className={styles.card}>
-            <Image
-              src="/images/pizza/PizzaDoubleChick.webp"
-              width={253}
-              height={253}
-              className={styles.cardImage}
-            />
-            <div className={styles.cardDescription}>
-              <h4 className={styles.cardTitle}>
-                С креветками и <br /> трюфелями
-              </h4>
-              <p className={styles.description}>
-                Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное
-                масло, черный перец, пармезан.350 г
-              </p>
-              <div className={styles.priceBasket}>
-                <h5 className={styles.price}>от 600 ₽</h5>
-                <button className={styles.basketBtn} onClick={trash}>
-                  В корзину
-                </button>
-              </div>
-            </div>
-          </div>
-          <span className={styles.text}>News</span>
-
-          <div className={styles.card}>
-            <Image
-              src="/images/pizza/PizzaDoubleChick.webp"
-              width={253}
-              height={253}
-              className={styles.cardImage}
-            />
-            <div className={styles.cardDescription}>
-              <h4 className={styles.cardTitle}>
-                С креветками и <br /> трюфелями
-              </h4>
-              <p className={styles.description}>
-                Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное
-                масло, черный перец, пармезан.350 г
-              </p>
-              <div className={styles.priceBasket}>
-                <h5 className={styles.price}>от 600 ₽</h5>
-                <button className={styles.basketBtn} onClick={trash}>
-                  В корзину
-                </button>
-              </div>
-            </div>
-          </div>
-          <span className={styles.text}>News</span>
-
-          <div className={styles.card}>
-            <Image
-              src="/images/pizza/PizzaDoubleChick.webp"
-              width={253}
-              height={253}
-              className={styles.cardImage}
-            />
-            <div className={styles.cardDescription}>
-              <h4 className={styles.cardTitle}>
-                С креветками и <br /> трюфелями
-              </h4>
-              <p className={styles.description}>
-                Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное
-                масло, черный перец, пармезан.350 г
-              </p>
-              <div className={styles.priceBasket}>
-                <h5 className={styles.price}>от 600 ₽</h5>
-                <button className={styles.basketBtn} onClick={trash}>
-                  В корзину
-                </button>
-              </div>
-            </div>
-          </div>
-          <span className={styles.text}>News</span>
-
-          <div className={styles.card}>
-            <Image
-              src="/images/pizza/PizzaDoubleChick.webp"
-              width={253}
-              height={253}
-              className={styles.cardImage}
-            />
-            <div className={styles.cardDescription}>
-              <h4 className={styles.cardTitle}>
-                С креветками и <br /> трюфелями
-              </h4>
-              <p className={styles.description}>
-                Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное
-                масло, черный перец, пармезан.350 г
-              </p>
-              <div className={styles.priceBasket}>
-                <h5 className={styles.price}>от 600 ₽</h5>
-                <button className={styles.basketBtn} onClick={trash}>
-                  В корзину
-                </button>
-              </div>
-            </div>
-          </div>
-          <span className={styles.text}>News</span>
+      </div>
+      <div className={styles.container}>
+        <h1 className={styles.title}>Комбо</h1>
+        <div className={styles.cards}>
+          {dataCombo.map((data) => {
+            return <Item data={data} key={data.id} trash={trash} />;
+          })}
         </div>
       </div>
       {show && <Basket />}

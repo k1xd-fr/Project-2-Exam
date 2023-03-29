@@ -18,9 +18,9 @@
     "description": {
       "type": "text"
     },
-    "Pizza": {
+    "img": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "allowedTypes": [
         "images",

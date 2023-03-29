@@ -12,7 +12,7 @@ const Home = () => {
       <div>
         <Slider items={[{ title: "dsadsa", image: "dasdasd" }]}>
           <div>
-            <img
+            <Image
               src="/img/slider-img1.png"
               alt="Slide 1"
               width={1100}
@@ -20,7 +20,7 @@ const Home = () => {
             />
           </div>
           <div>
-            <img
+            <Image
               src="/img/slider-img1.png"
               alt="Slide 2"
               width={1100}
@@ -28,7 +28,7 @@ const Home = () => {
             />
           </div>
           <div>
-            <img
+            <Image
               src="/img/slider-img1.png"
               alt="Slide 3"
               width={1100}

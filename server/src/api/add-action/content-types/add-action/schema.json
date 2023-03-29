@@ -4,7 +4,8 @@
   "info": {
     "singularName": "add-action",
     "pluralName": "add-actions",
-    "displayName": "Add-action"
+    "displayName": "Add-action",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +14,19 @@
   "attributes": {
     "name": {
       "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "action": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }
