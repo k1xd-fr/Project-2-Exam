@@ -11,7 +11,7 @@ const MapAndOrder = () => {
           <div className={styles.infoblog}>
             <div className={styles.blog}>
               <div className={styles.iconBlog}>
-                <Image src="/images/icon/card.svg" width={45} height={45} />
+                <Image alt="iconCard" src="/images/icon/card.svg" width={45} height={45} />
               </div>
               <p className={styles.description}>
                 Lorem ipsum dolor sit amet, <br /> consectetur adipiscing elit
@@ -19,7 +19,7 @@ const MapAndOrder = () => {
             </div>
             <div className={styles.blog}>
               <div className={styles.iconBlog}>
-                <Image src="/images/icon/car1.svg" width={45} height={45} />
+                <Image alt="iconCar1" src="/images/icon/car1.svg" width={45} height={45} />
               </div>
               <p className={styles.description}>
                 Lorem ipsum dolor sit amet, <br /> consectetur adipiscing elit
@@ -27,7 +27,7 @@ const MapAndOrder = () => {
             </div>
             <div className={styles.blog}>
               <div className={styles.iconBlog}>
-                <Image src="/images/icon/desc.svg" width={45} height={45} />
+                <Image alt="icondesc" src="/images/icon/desc.svg" width={45} height={45} />
               </div>
               <p className={styles.description}>
                 Lorem ipsum dolor sit amet, <br /> consectetur adipiscing elit
@@ -35,7 +35,7 @@ const MapAndOrder = () => {
             </div>
             <div className={styles.blog}>
               <div className={styles.iconBlog}>
-                <Image src="/images/icon/car2.svg" width={45} height={45} />
+                <Image alt="iconCar2" src="/images/icon/car2.svg" width={45} height={45} />
               </div>
               <p className={styles.description}>
                 Lorem ipsum dolor sit amet, <br /> consectetur adipiscing elit

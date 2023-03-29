@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "add_actions",
+  "info": {
+    "singularName": "add-action",
+    "pluralName": "add-actions",
+    "displayName": "Add-action",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "action": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

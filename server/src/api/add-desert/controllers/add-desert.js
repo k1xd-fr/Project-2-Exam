@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * user-pizza controller
+ * add-desert controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::user-pizza.user-pizza');
+module.exports = createCoreController('api::add-desert.add-desert');

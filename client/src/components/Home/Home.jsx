@@ -1,7 +1,8 @@
-import Cards from "../Layout/Cards";
+import Cards from "../Layout/PizzaCards";
 import Header from "../Layout/Header";
 import Map from "../Layout/Map";
 import Slider from "../UI/Slider/Slider";
+import Image from "next/image";
 
 const Home = () => {
   return (
@@ -10,7 +11,7 @@ const Home = () => {
       <div>
         <Slider items={[{title: 'dsadsa', image: 'dasdasd'}]}>
           <div>
-            <img
+            <Image
               src="/img/slider-img1.png"
               alt="Slide 1"
               width={1100}
@@ -18,7 +19,7 @@ const Home = () => {
             />
           </div>
           <div>
-            <img
+            <Image
               src="/img/slider-img1.png"
               alt="Slide 2"
               width={1100}
@@ -26,7 +27,7 @@ const Home = () => {
             />
           </div>
           <div>
-            <img
+            <Image
               src="/img/slider-img1.png"
               alt="Slide 3"
               width={1100}

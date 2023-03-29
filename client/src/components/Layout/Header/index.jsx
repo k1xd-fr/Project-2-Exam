@@ -36,6 +36,7 @@ const Header = () => {
                 src="/img/logo.svg"
                 alt="logo"
                 className={styles.logo}
+                priority
               />
             </Link>
             <div className={styles.shippingContent}>

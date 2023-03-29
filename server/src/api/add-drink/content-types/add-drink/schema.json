@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "add_drinks",
+  "info": {
+    "singularName": "add-drink",
+    "pluralName": "add-drinks",
+    "displayName": "Add-drink",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Price": {
+      "type": "biginteger"
+    }
+  }
+}
