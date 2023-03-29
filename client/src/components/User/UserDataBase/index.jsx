@@ -1,12 +1,36 @@
 import Button from "@/components/UI/Button/Button";
 import Input from "@/components/UI/Input/Input";
+import { useParamContext } from "@/context/context";
 import cn from "clsx";
+import { useState } from "react";
 import styles from "./style.module.sass";
 
 const UserDataBase = ({ user }) => {
+  const { authData } = useParamContext();
+
+  const [param, setParam] = useState({
+    name: "",
+    email: "",
+    date: "",
+    num: "",
+    password: "",
+  });
+
+  const change = (e) => {
+    setParam((param) => {
+      return {
+        ...param,
+        [e.target.name]: e.target.value,
+      };
+    });
+  };
+
   return (
     <div className={styles.container}>
       <h1>Личные данные</h1>
+
+      {authData.username}
+
       <form className={styles.form}>
         <div className={styles.userData}>
           <Input
@@ -15,6 +39,8 @@ const UserDataBase = ({ user }) => {
             name="name"
             placeholder={user}
             title="имя"
+            onchahge={change}
+            value={param.name}
           />
           <Input
             style={styles.userDataInput}
@@ -22,6 +48,8 @@ const UserDataBase = ({ user }) => {
             name="email"
             placeholder={user}
             title="e-mail"
+            onchahge={change}
+            value={param.email}
           />
           <Input
             style={styles.userDataInput}
@@ -29,6 +57,8 @@ const UserDataBase = ({ user }) => {
             name="date"
             placeholder={user}
             title="Дата рождения"
+            onchahge={change}
+            value={param.date}
           />
           <Input
             style={styles.userDataInput}
@@ -36,6 +66,8 @@ const UserDataBase = ({ user }) => {
             name="num"
             placeholder={user}
             title="Номер телефона"
+            onchahge={change}
+            value={param.num}
           />
           <Input
             style={styles.userDataInput}
@@ -43,6 +75,8 @@ const UserDataBase = ({ user }) => {
             name="password"
             placeholder={user}
             title="Пароль"
+            onchahge={change}
+            value={param.password}
           />
         </div>
         <h2>Подписки</h2>

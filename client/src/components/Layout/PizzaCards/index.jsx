@@ -2,7 +2,7 @@ import Basket from "@/components/ui/Basket/Basket";
 import Image from "next/image";
 import { useState } from "react";
 
-import styles from "./Cards.module.sass";
+import styles from "./PizzaCards.module.sass";
 
 const Cards = () => {
   const [show, setShow] = useState(false);
