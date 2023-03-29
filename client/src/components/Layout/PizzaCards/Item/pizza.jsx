@@ -5,13 +5,14 @@ const Item = ({trash , data}) => {
   return (
     <div>
       <div className={styles.card}>
-        {/* <Image
-          src={data}
+        <Image
+          src={data.img.url}
+          priority
           width={253}
           height={253}
           className={styles.cardImage}
-          alt={data.Pizza.name}
-        /> */}
+          alt={data.img.name}
+        />
         <div className={styles.cardDescription}>
           <h4 className={styles.cardTitle}>
            {data.Name}
