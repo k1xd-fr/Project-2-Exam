@@ -5,6 +5,9 @@
 .mainAction
   padding-top: 70px
   margin-bottom: 80px
+  display: flex
+  justify-content: center
+  align-items: center
 
 .actionTitle
   font-weight: 700
@@ -22,6 +25,7 @@
   grid-template-rows: repeat(2, 1fr)
   grid-column-gap: 30px
   grid-row-gap: 30px
+  padding-bottom: 50px
 
   // display: flex
   .mainImage
@@ -36,3 +40,30 @@
       grid-area: 2 / 3 / 3 / 4
     &:last-child
       grid-area: 2 / 4 / 3 / 5
+
+.actionBtn
+  padding: 15px 40px
+  background: #FF2E65
+  border-radius: 23px
+  font-style: normal
+  font-weight: 700
+  font-size: 14px
+  line-height: 28px
+  color: #FFFFFF
+  // margin-left: 43%
+  // margin-right: 50%
+
+@media screen and ( max-width: 1085px)
+  .images
+    display: flex
+    flex-wrap: wrap
+    padding: 14px
+  .mainImage
+    max-width: 100%
+
+@media screen and ( max-width:855px )
+  .images
+    display: flex
+    justify-content: center
+  .actionTitle
+    font-size: 36px !important

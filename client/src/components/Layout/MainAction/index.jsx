@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./MainAction.module.sass";
 
 const MainAction = () => {
@@ -16,6 +17,7 @@ const MainAction = () => {
                 width={540}
                 height={407}
                 alt="action-image"
+                className={styles.mainImage}
               />
             </div>
             <div className={styles.mainImage}>
@@ -24,6 +26,7 @@ const MainAction = () => {
                 width={256}
                 height={189}
                 alt="action-image"
+                className={styles.mainImage}
               />
             </div>
             <div className={styles.mainImage}>
@@ -32,6 +35,7 @@ const MainAction = () => {
                 width={256}
                 height={189}
                 alt="action-image"
+                className={styles.mainImage}
               />
             </div>
             <div className={styles.mainImage}>
@@ -40,6 +44,7 @@ const MainAction = () => {
                 width={256}
                 height={189}
                 alt="action-image"
+                className={styles.mainImage}
               />
             </div>
             <div className={styles.mainImage}>
@@ -48,9 +53,11 @@ const MainAction = () => {
                 width={256}
                 height={189}
                 alt="action-image"
+                className={styles.mainImage}
               />
             </div>
           </div>
+          <Link href='/action'className={styles.actionBtn}>Все акции</Link>
         </div>
       </div>
     </div>

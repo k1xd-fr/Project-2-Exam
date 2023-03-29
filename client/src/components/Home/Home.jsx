@@ -39,7 +39,7 @@ const Home = () => {
         <Cards />
         <MainAction />
         <Map />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </>
   );
