@@ -52,27 +52,29 @@ const Header = () => {
           </div>
           <nav className={styles.navBar}>
             <div className={styles.scroll}>
-              <Link href="/" className={styles.navLink}>
-                Паста
-              </Link>
-              <Link href="/" className={styles.navLink}>
+              <a href="#pizza" className={styles.navLink}>
+                Пицца
+              </a>
+
+              <a href="#salats" className={styles.navLink}>
                 Салаты
-              </Link>
-              <Link href="/" className={styles.navLink}>
+              </a>
+
+              <a href="#drinks" className={styles.navLink}>
                 Напитки
-              </Link>
-              <Link href="/" className={styles.navLink}>
+              </a>
+              <a href="#deserts" className={styles.navLink}>
                 Десерты
-              </Link>
-              <Link href="/action" className={styles.navLink}>
+              </a>
+              <a href="#action" className={styles.navLink}>
                 Акции
-              </Link>
-              <Link href="/" className={styles.navLink}>
+              </a>
+              <a href="#combo" className={styles.navLink}>
                 Комбо
-              </Link>
-              <Link href="/contacts" className={styles.navLink}>
+              </a>
+              <a href="/contacts" className={styles.navLink}>
                 Контакты
-              </Link>
+              </a>
             </div>
             <div className={styles.auth}>
               <button className={styles.signIn} onClick={showModal}>

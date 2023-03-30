@@ -1,7 +1,7 @@
 import ky from "ky";
 
 const requestPizza = ky.create({
-  prefixUrl: "http://127.0.0.1:1337/api",
+  prefixUrl: "http://localhost:1337/api",
 });
 
 export const fetchPizzas = () => {

@@ -6,6 +6,7 @@ import {
   fetchSalads,
 } from "@/api/requsetPizza";
 import Basket from "@/components/ui/Basket/Basket";
+import Link from "next/link";
 
 import { useEffect, useState } from "react";
 import Item from "./Item/pizza";
@@ -44,7 +45,9 @@ const Cards = () => {
   return (
     <div className={styles.menu}>
       <div className={styles.container}>
-        <h1 className={styles.title}>Пицца</h1>
+        <h2 id="pizza" className={styles.title}>
+          Пицца
+        </h2>
         <div className={styles.cards}>
           {dataPizza.map((data) => {
             return <Item data={data} key={data.id} trash={trash} />;
@@ -52,7 +55,9 @@ const Cards = () => {
         </div>
       </div>
       <div className={styles.container}>
-        <h1 className={styles.title}>Салаты</h1>
+        <h2 id="salats" className={styles.title}>
+          Салаты
+        </h2>
         <div className={styles.cards}>
           {dataSalad.map((data) => {
             return <Item data={data} key={data.id} trash={trash} />;
@@ -60,7 +65,9 @@ const Cards = () => {
         </div>
       </div>
       <div className={styles.container}>
-        <h1 className={styles.title}>Напитки</h1>
+        <h2 id="drinks" className={styles.title}>
+          Напитки
+        </h2>
         <div className={styles.cards}>
           {dataDrink.map((data) => {
             return <Item data={data} key={data.id} trash={trash} />;
@@ -68,7 +75,9 @@ const Cards = () => {
         </div>
       </div>
       <div className={styles.container}>
-        <h1 className={styles.title}>Десерты</h1>
+        <h2 className={styles.title} id="deserts">
+          Десерты
+        </h2>
         <div className={styles.cards}>
           {dataDesert.map((data) => {
             return <Item data={data} key={data.id} trash={trash} />;
@@ -76,7 +85,7 @@ const Cards = () => {
         </div>
       </div>
       <div className={styles.container}>
-        <h1 className={styles.title}>Комбо</h1>
+        <h1 className={styles.title} id="combo">Комбо</h1>
         <div className={styles.cards}>
           {dataCombo.map((data) => {
             return <Item data={data} key={data.id} trash={trash} />;

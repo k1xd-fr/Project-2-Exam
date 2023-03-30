@@ -4,6 +4,7 @@ import Map from "../Layout/Map";
 import Slider from "../UI/Slider/Slider";
 import Footer from "../Layout/Footer";
 import MainAction from "../Layout/MainAction";
+import Image from "next/image";
 
 const Home = () => {
   return (
