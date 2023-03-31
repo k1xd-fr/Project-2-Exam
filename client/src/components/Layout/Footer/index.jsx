@@ -141,6 +141,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <Image className={styles.lapsha} width={312} height={245} src="/img/lapsha.svg"/>
     </div>
   );
 };
