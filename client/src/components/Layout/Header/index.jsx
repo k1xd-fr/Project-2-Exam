@@ -5,12 +5,14 @@ import React, { useState } from "react";
 import styles from "./Header.module.sass";
 import Modal from "@/components/ui/Modal/Modal";
 import { Register } from "@/components/UI/Modal/Register/Register";
+import Basket from "@/components/UI/Basket/Basket";
 
-const Header = () => {
+const Header = ({ click }) => {
   const { asPath } = useRouter();
   const [visible, isVisible] = useState(false);
   const [hamburger, setHamburger] = useState(false);
   const [modal, setModal] = useState(false);
+  const [show, setShow] = useState(false);
 
   const showModal = () => {
     setModal((modal) => !modal);
@@ -23,6 +25,10 @@ const Header = () => {
   const close = () => {
     setModal(false);
   };
+
+  // const trash = () => {
+  //   setShow((show) => !show);
+  // };
 
   return (
     <header className={styles.header}>
@@ -66,9 +72,9 @@ const Header = () => {
               <a href="#deserts" className={styles.navLink}>
                 Десерты
               </a>
-              <a href="#action" className={styles.navLink}>
+              <Link href="/action" className={styles.navLink}>
                 Акции
-              </a>
+              </Link>
               <a href="#combo" className={styles.navLink}>
                 Комбо
               </a>
@@ -84,6 +90,7 @@ const Header = () => {
                 Корзина
               </Link>
             </div>
+            {/* {show && <Basket click={close} />} */}
           </nav>
         </div>
       </div>

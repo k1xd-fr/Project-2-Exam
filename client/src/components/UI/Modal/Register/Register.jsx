@@ -70,10 +70,10 @@ export const Register = ({ click }) => {
           />
           <button className={styles.btn}>Войти</button>
         </div>
+        <p className={styles.close} onClick={click}>
+          &#215;
+        </p>
       </form>
-      <p className={styles.close} onClick={click}>
-        &#215;
-      </p>
     </>
   );
 };

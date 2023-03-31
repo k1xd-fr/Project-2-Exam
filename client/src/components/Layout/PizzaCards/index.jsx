@@ -14,11 +14,6 @@ import Item from "./Item/pizza";
 import styles from "./PizzaCards.module.sass";
 
 const Cards = () => {
-  const [show, setShow] = useState(false);
-
-  const trash = () => {
-    setShow((show) => !show);
-  };
   const [dataPizza, setDataPizza] = useState([]);
   const [dataSalad, setDataSalad] = useState([]);
   const [dataDrink, setDataDrink] = useState([]);
@@ -50,7 +45,7 @@ const Cards = () => {
         </h2>
         <div className={styles.cards}>
           {dataPizza.map((data) => {
-            return <Item data={data} key={data.id} trash={trash} />;
+            return <Item data={data} key={data.id} />;
           })}
         </div>
       </div>
@@ -60,7 +55,7 @@ const Cards = () => {
         </h2>
         <div className={styles.cards}>
           {dataSalad.map((data) => {
-            return <Item data={data} key={data.id} trash={trash} />;
+            return <Item data={data} key={data.id} />;
           })}
         </div>
       </div>
@@ -70,7 +65,7 @@ const Cards = () => {
         </h2>
         <div className={styles.cards}>
           {dataDrink.map((data) => {
-            return <Item data={data} key={data.id} trash={trash} />;
+            return <Item data={data} key={data.id} />;
           })}
         </div>
       </div>
@@ -80,19 +75,20 @@ const Cards = () => {
         </h2>
         <div className={styles.cards}>
           {dataDesert.map((data) => {
-            return <Item data={data} key={data.id} trash={trash} />;
+            return <Item data={data} key={data.id} />;
           })}
         </div>
       </div>
       <div className={styles.container}>
-        <h1 className={styles.title} id="combo">Комбо</h1>
+        <h1 className={styles.title} id="combo">
+          Комбо
+        </h1>
         <div className={styles.cards}>
           {dataCombo.map((data) => {
-            return <Item data={data} key={data.id} trash={trash} />;
+            return <Item data={data} key={data.id} />;
           })}
         </div>
       </div>
-      {show && <Basket />}
     </div>
   );
 };
