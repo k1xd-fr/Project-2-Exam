@@ -5,10 +5,10 @@ export function middleware(request) {
   if (!cookies) {
     if (request.nextUrl.pathname.startsWith("/profile")) {
       return NextApiResponse.redirect(new URL("/Modal/Register", request.url));
-    } else {
-      if (request.nextUrl.pathname.startsWith("/Modal/Register")) {
-        return NextApiResponse.redirect(new URL("/profile", request.url));
-      }
+    }
+  } else {
+    if (request.nextUrl.pathname.startsWith("/Modal/Register")) {
+      return NextApiResponse.redirect(new URL("/profile", request.url));
     }
   }
 }

@@ -8,6 +8,7 @@ import { useParamContext } from "@/context/context";
 
 export const Register = ({ click }) => {
   const { authData, setAuthData } = useParamContext();
+
   const router = useRouter();
 
   const changeHandler = (e) => {
@@ -28,6 +29,7 @@ export const Register = ({ click }) => {
       Cookies.set("token", data.jwt, {
         expires: 30,
       });
+
       if (data) {
         router.push("/profile");
       }

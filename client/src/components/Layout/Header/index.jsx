@@ -6,6 +6,8 @@ import styles from "./Header.module.sass";
 import Modal from "@/components/ui/Modal/Modal";
 import { Register } from "@/components/UI/Modal/Register/Register";
 import Basket from "@/components/UI/Basket/Basket";
+import { useScroll } from "@/hooks/useScroll";
+import cn from "clsx";
 
 const Header = ({ click }) => {
   const { asPath } = useRouter();
@@ -13,6 +15,12 @@ const Header = ({ click }) => {
   const [hamburger, setHamburger] = useState(false);
   const [modal, setModal] = useState(false);
   const [show, setShow] = useState(false);
+
+  const scrollY = useScroll();
+
+  const isHideHeaderTop = scrollY > 100;
+
+  // console.log(scrollSize);
 
   const showModal = () => {
     setModal((modal) => !modal);
@@ -26,12 +34,14 @@ const Header = ({ click }) => {
     setModal(false);
   };
 
-  // const trash = () => {
-  //   setShow((show) => !show);
-  // };
+  const trash = () => {
+    setShow((show) => !show);
+  };
 
   return (
-    <header className={styles.header}>
+    <header
+      className={cn(styles.header, isHideHeaderTop && styles.headerScrolled)}
+    >
       <div className={styles.container}>
         <div className={styles.headerContent}>
           <div className={styles.headerTop}>

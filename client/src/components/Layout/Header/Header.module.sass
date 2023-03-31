@@ -3,14 +3,20 @@
   margin: 0 auto
 
 .header
-  padding: 25px
-  position: sticky
+  position: fixed
   top: 0
+  width: 100%
+  padding: 15px
   background: #cecece
   z-index: 5
   box-shadow: 3px 1px 6px 5px #c7c5c5
   margin-bottom: 40px
   background: #fff
+
+.headerScrolled
+  .headerTop
+    display: none
+    padding-bottom: 0
 
 .headerTop
   display: flex
@@ -43,7 +49,7 @@
   display: flex
   align-items: center
   justify-content: space-between
-  padding-top: 35px
+  padding-top: 15px
 
 .auth
   display: flex
