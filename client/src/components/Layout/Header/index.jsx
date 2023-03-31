@@ -5,12 +5,14 @@ import React, { useState } from "react";
 import styles from "./Header.module.sass";
 import Modal from "@/components/ui/Modal/Modal";
 import { Register } from "@/components/UI/Modal/Register/Register";
+import Basket from "@/components/UI/Basket/Basket";
 
-const Header = () => {
+const Header = ({ click }) => {
   const { asPath } = useRouter();
   const [visible, isVisible] = useState(false);
   const [hamburger, setHamburger] = useState(false);
   const [modal, setModal] = useState(false);
+  const [show, setShow] = useState(false);
 
   const showModal = () => {
     setModal((modal) => !modal);
@@ -23,6 +25,10 @@ const Header = () => {
   const close = () => {
     setModal(false);
   };
+
+  // const trash = () => {
+  //   setShow((show) => !show);
+  // };
 
   return (
     <header className={styles.header}>
@@ -52,27 +58,29 @@ const Header = () => {
           </div>
           <nav className={styles.navBar}>
             <div className={styles.scroll}>
-              <Link href="/" className={styles.navLink}>
-                Паста
-              </Link>
-              <Link href="/" className={styles.navLink}>
+              <a href="#pizza" className={styles.navLink}>
+                Пицца
+              </a>
+
+              <a href="#salats" className={styles.navLink}>
                 Салаты
-              </Link>
-              <Link href="/" className={styles.navLink}>
+              </a>
+
+              <a href="#drinks" className={styles.navLink}>
                 Напитки
-              </Link>
-              <Link href="/" className={styles.navLink}>
+              </a>
+              <a href="#deserts" className={styles.navLink}>
                 Десерты
-              </Link>
+              </a>
               <Link href="/action" className={styles.navLink}>
                 Акции
               </Link>
-              <Link href="/" className={styles.navLink}>
+              <a href="#combo" className={styles.navLink}>
                 Комбо
-              </Link>
-              <Link href="/contacts" className={styles.navLink}>
+              </a>
+              <a href="/contacts" className={styles.navLink}>
                 Контакты
-              </Link>
+              </a>
             </div>
             <div className={styles.auth}>
               <button className={styles.signIn} onClick={showModal}>
@@ -82,6 +90,7 @@ const Header = () => {
                 Корзина
               </Link>
             </div>
+            {/* {show && <Basket click={close} />} */}
           </nav>
         </div>
       </div>

@@ -1,15 +1,39 @@
-.basket
+.drawback
   position: fixed
   top: 0
+  left: 0
   right: 0
-  width: 350px
+  width: 100vw
   height: 100vh
-  background: #55555565
+  background: #00000073
   z-index: 99
+
+.basket
+  position: absolute
+  background: #fff
+  width: 670px
+  margin: auto
+  left: 0
+  right: 0
   animation: myAnim .5s ease 0s 1 normal forwards
+  top: 0
+  bottom: 0
+  height: 320px
+  padding: 45px
+  border-radius: 12px
+
+.close
+  position: absolute
+  top: 270px
+  right: 580px
+  width: max-content
+  font-size: 70px
+  color: #c7bbbb
+  cursor: pointer
+  z-index: 10
 
 @keyframes myAnim
   0%
-    transform: translateX(100%)
+    transform: scale(0)
   100%
-    transform: translate(0)
+    transform: scale(1)
