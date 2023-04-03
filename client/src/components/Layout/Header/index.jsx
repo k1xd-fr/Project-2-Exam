@@ -58,24 +58,24 @@ const Header = ({ click }) => {
           </div>
           <nav className={styles.navBar}>
             <div className={styles.scroll}>
-              <a href="#pizza" className={styles.navLink}>
+              <a href="/#pizza" className={styles.navLink}>
                 Пицца
               </a>
 
-              <a href="#salats" className={styles.navLink}>
+              <a href="/#salats" className={styles.navLink}>
                 Салаты
               </a>
 
-              <a href="#drinks" className={styles.navLink}>
+              <a href="/#drinks" className={styles.navLink}>
                 Напитки
               </a>
-              <a href="#deserts" className={styles.navLink}>
+              <a href="/#deserts" className={styles.navLink}>
                 Десерты
               </a>
               <Link href="/action" className={styles.navLink}>
                 Акции
               </Link>
-              <a href="#combo" className={styles.navLink}>
+              <a href="/#combo" className={styles.navLink}>
                 Комбо
               </a>
               <a href="/contacts" className={styles.navLink}>
