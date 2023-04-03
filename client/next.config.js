@@ -3,7 +3,11 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ["res.cloudinary.com"],
-    },
-}
+  },
 
-module.exports = nextConfig
+  env: {
+    NEXT_PUBCLI_AUTH_API: process.env.NEXT_PUBCLI_AUTH_API,
+  },
+};
+
+module.exports = nextConfig;

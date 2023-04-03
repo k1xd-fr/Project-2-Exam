@@ -8,9 +8,11 @@ import { Register } from "@/components/UI/Modal/Register/Register";
 import Basket from "@/components/UI/Basket/Basket";
 import { useScroll } from "@/hooks/useScroll";
 import cn from "clsx";
+import { useParamContext } from "@/context/context";
 
 const Header = ({ click }) => {
   const { asPath } = useRouter();
+  const { loading, isAuth } = useParamContext();
   const [visible, isVisible] = useState(false);
   const [hamburger, setHamburger] = useState(false);
   const [modal, setModal] = useState(false);
@@ -37,6 +39,8 @@ const Header = ({ click }) => {
   const trash = () => {
     setShow((show) => !show);
   };
+
+  // if (loading) return <h2>Loading....</h2>;
 
   return (
     <header
@@ -67,6 +71,7 @@ const Header = ({ click }) => {
             </a>
           </div>
           <nav className={styles.navBar}>
+            {/* {if(isAuth && href === "/Modal/Register") return null} */}
             <div className={styles.scroll}>
               <a href="/#pizza" className={styles.navLink}>
                 Пицца

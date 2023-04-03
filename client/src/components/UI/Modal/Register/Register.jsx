@@ -1,15 +1,15 @@
-import { registerUser } from "@/api/clientApi";
 import { useState } from "react";
 import styles from "../Modal.module.sass";
 
-import Cookies from "js-cookie";
-import { useRouter } from "next/router";
 import { useParamContext } from "@/context/context";
 
 export const Register = ({ click }) => {
-  const { authData, setAuthData } = useParamContext();
-
-  const router = useRouter();
+  const [authData, setAuthData] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+  const { login } = useParamContext();
 
   const changeHandler = (e) => {
     setAuthData((prev) => {
@@ -20,22 +20,24 @@ export const Register = ({ click }) => {
     });
   };
 
-  const sentData = async (e) => {
+  const sentData = (e) => {
     e.preventDefault();
 
-    try {
-      const data = await registerUser(authData);
+    login(authData);
 
-      Cookies.set("token", data.jwt, {
-        expires: 30,
-      });
+    // try {
+    //   const data = await registerUser(authData);
 
-      if (data) {
-        router.push("/profile");
-      }
-    } catch (error) {
-      console.log(error.message);
-    }
+    //   Cookies.set("token", data.jwt, {
+    //     expires: 30,
+    //   });
+
+    //   if (data) {
+    //     router.push("/profile");
+    //   }
+    // } catch (error) {
+    //   console.log(error.message);
+    // }
   };
 
   return (
@@ -70,7 +72,10 @@ export const Register = ({ click }) => {
             placeholder="Enter password"
             onChange={changeHandler}
           />
-          <button className={styles.btn}>Войти</button>
+          <div className={styles.btns}>
+            <button className={styles.btn}>Log In</button>
+            <button className={styles.btn}>Sign In</button>
+          </div>
         </div>
         <p className={styles.close} onClick={click}>
           &#215;

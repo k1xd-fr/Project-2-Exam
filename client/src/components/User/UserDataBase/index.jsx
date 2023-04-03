@@ -29,7 +29,7 @@ const UserDataBase = ({ user }) => {
     <div className={styles.container}>
       <h1>Личные данные</h1>
 
-      {authData.username}
+      {/* {authData.username} */}
 
       <form className={styles.form}>
         <div className={styles.userData}>
