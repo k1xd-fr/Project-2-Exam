@@ -12,6 +12,8 @@ import { useEffect, useState } from "react";
 import Item from "./Item/pizza";
 
 import styles from "./PizzaCards.module.sass";
+import { useRouter } from "next/router";
+import PizzaModal from "@/components/PizzaModal";
 
 const Cards = () => {
   const [dataPizza, setDataPizza] = useState([]);
@@ -19,6 +21,9 @@ const Cards = () => {
   const [dataDrink, setDataDrink] = useState([]);
   const [dataDesert, setDataDesert] = useState([]);
   const [dataCombo, setDataCombo] = useState([]);
+
+  const router = useRouter();
+
   useEffect(() => {
     fetchPizzas().then((data) => {
       setDataPizza(data.data);
@@ -37,6 +42,10 @@ const Cards = () => {
     });
   }, []);
 
+  // const click = () => {
+  //   router.push('/')
+  // }
+
   return (
     <div className={styles.menu}>
       <div className={styles.container}>
@@ -45,7 +54,13 @@ const Cards = () => {
         </h2>
         <div className={styles.cards}>
           {dataPizza.map((data) => {
-            return <Item data={data} key={data.id} />;
+            return (
+              <Item
+                click={() => router.push(`/${data.id}`)}
+                data={data}
+                key={data.id}
+              />
+            );
           })}
         </div>
       </div>

@@ -22,3 +22,7 @@ export const fetchCombos = () => {
 export const fetchIngs = () => {
   return requestPizza.get("add-ings?populate*").json();
 };
+
+export const fetchPizzaById = (id) => {
+  return requestPizza.get(`add-pizzas/${id}?populate=*`).json();
+};

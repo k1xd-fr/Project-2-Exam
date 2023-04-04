@@ -1,0 +1,60 @@
+// .modalPizza
+//   position: fixed
+//   background: #FFFFFF
+//   box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.08)
+//   border-radius: 22px
+//   width: 960px
+//   height: 610px
+
+.bgPizza
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  width: 100vw
+  height: 100vh
+  background: #00000073
+  z-index: 99
+  .modalPizza
+    position: absolute
+    background: #fff
+    width: 670px
+    margin: auto
+    left: 0
+    right: 0
+    animation: myAnim .5s ease 0s 1 normal forwards
+    top: 0
+    bottom: 0
+    height: 320px
+    padding: 20px
+    border-radius: 12px
+    overflow: hidden
+    .modalContent
+      display: flex
+      justify-content: space-between
+    .pizzaDesc
+      display: flex
+      flex-direction: column
+      .title
+        font-weight: 800
+        font-size: 20px
+        line-height: 28px
+        color: #0E0C0D
+        margin-bottom: 5px
+      .pizzaText
+        font-weight: 600
+        font-size: 14px
+        line-height: 28px
+        color: #686466
+
+.close
+  position: absolute
+  top: 280px
+  right: 585px
+  // left: 20px
+
+  width: max-content
+  font-size: 70px
+  color: #fff
+  cursor: pointer
+  z-index: 10

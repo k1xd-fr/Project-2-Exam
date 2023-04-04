@@ -14,10 +14,10 @@ export const AuthProviders = ({ children }) => {
     async function checkToken() {
       const token = Cookies.get("token");
       console.log(token);
-      if (token) {
-        const userData = await fetchUsers(token);
-        if (userData) setUser(userData);
-      }
+      // if (token) {
+      //   const userData = await fetchUsers(token);
+      //   if (userData) setUser(userData);
+      // }
       setLoading(false);
     }
     checkToken();

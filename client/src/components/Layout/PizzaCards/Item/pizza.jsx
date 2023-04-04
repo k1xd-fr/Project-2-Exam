@@ -1,7 +1,7 @@
 import styles from "../PizzaCards.module.sass";
 import Image from "next/image";
 
-const Item = ({ data }) => {
+const Item = ({ data, click }) => {
   return (
     <div>
       <div className={styles.card}>
@@ -18,7 +18,9 @@ const Item = ({ data }) => {
           <p className={styles.description}>{data.description}</p>
           <div className={styles.priceBasket}>
             <h5 className={styles.price}>от {data.Price}₽</h5>
-            <button className={styles.basketBtn}>В корзину</button>
+            <button onClick={click} className={styles.basketBtn}>
+              В корзину
+            </button>
           </div>
         </div>
       </div>
