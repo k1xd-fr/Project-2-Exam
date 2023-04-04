@@ -1,0 +1,40 @@
+.wrapper
+  display: flex
+  padding: 20px
+.steps
+  display: flex
+  align-items: flex-start
+  gap: 20px
+  justify-content: space-around
+  align-items: center
+  .step
+    width: max-content
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+    flex-direction: column
+    > p
+      padding: 4px 15px
+      text-align: center
+      border-radius: 50%
+      width: max-content
+      display: inline-block
+      border: 2px solid #FF2E65
+      font-style: normal
+      font-weight: 700
+      font-size: 15px
+      line-height: 28px
+  > hr
+    border-bottom: 2px dashed #B8C5D0 !important
+    width: 102px
+    border: none
+    z-index: 9
+
+.active
+  color: #FFFFFF
+  background: #FF2E65
+
+.succes
+  color: #FF2E65
+  background: #ffffff
