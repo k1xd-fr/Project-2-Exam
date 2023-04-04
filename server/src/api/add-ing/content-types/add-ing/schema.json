@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "add_ings",
+  "info": {
+    "singularName": "add-ing",
+    "pluralName": "add-ings",
+    "displayName": "Add-Ing"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "price": {
+      "type": "integer"
+    }
+  }
+}

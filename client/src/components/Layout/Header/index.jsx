@@ -96,6 +96,9 @@ const Header = ({ click }) => {
               <a href="/contacts" className={styles.navLink}>
                 Контакты
               </a>
+              <Link href="/orders" className={styles.navLink}>
+                Доставка
+              </Link>
             </div>
             <div className={styles.auth}>
               <button className={styles.signIn} onClick={showModal}>

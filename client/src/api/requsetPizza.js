@@ -20,7 +20,7 @@ export const fetchCombos = () => {
   return requestPizza.get("add-combos?populate=*").json();
 };
 export const fetchIngs = () => {
-  return requestPizza.get("add-ings?populate*").json();
+  return requestPizza.get("add-Ings?populate=*").json();
 };
 
 export const fetchPizzaById = (id) => {
