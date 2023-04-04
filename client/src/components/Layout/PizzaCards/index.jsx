@@ -5,8 +5,6 @@ import {
   fetchPizzas,
   fetchSalads,
 } from "@/api/requsetPizza";
-import Basket from "@/components/ui/Basket/Basket";
-import Link from "next/link";
 
 import { useEffect, useState } from "react";
 import Item from "./Item/pizza";

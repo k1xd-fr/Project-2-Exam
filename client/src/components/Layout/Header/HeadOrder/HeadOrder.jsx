@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import StepsOrder from "./StepsOrder";
 import styles from "./style.module.sass";
 
 const HeadOrder = () => {
   return (
     <>
-      <header>
+      <header className={styles.header}>
         <Link href="/">
           <Image
             width={200}
@@ -15,6 +16,14 @@ const HeadOrder = () => {
             priority
           />
         </Link>
+        <div>
+          <StepsOrder
+            first={styles.active}
+            second={null}
+            third={null}
+            changeNum="3"
+          />
+        </div>
       </header>
     </>
   );
