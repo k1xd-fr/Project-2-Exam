@@ -1,9 +1,14 @@
 import styles from "./Modal.module.sass";
 
-const Modal = ({ children }) => {
+
+
+
+const Modal = ({ children , close}) => {
   return (
-    <div className={styles.block}>
-      <div className={styles.modal}>{children}</div>
+    <div onClick={close} className={styles.block}>
+      <div className={styles.modal}>
+        {children}
+      </div>
     </div>
   );
 };
