@@ -3,9 +3,6 @@ import styles from "./style.module.sass";
 
 export const PlusMinus = ({ num }) => {
   const [count, setCount] = useState(0);
-  const plus = () => {
-    setCount(count + 1) ;
-  };
   return (
     <div className={styles.plusMinus}>
       <span onClick={()=> setCount(count - 1)}>-</span>
